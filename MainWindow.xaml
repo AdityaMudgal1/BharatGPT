@@ -1,0 +1,31 @@
+﻿<Window x:Class="BharatGPT.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="BharatGPT - Personal AI Assistant" Height="500" Width="800"
+        Background="#FF1F1F1F" Foreground="White" FontFamily="Segoe UI">
+    <Grid Margin="20">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="🇮🇳 BharatGPT - Your Hinglish Voice Assistant"
+                   FontSize="26" FontWeight="Bold"
+                   HorizontalAlignment="Center" Margin="0,10,0,20"/>
+
+        <ScrollViewer Grid.Row="1" Margin="0,0,0,10" VerticalScrollBarVisibility="Auto">
+            <TextBox x:Name="ChatBox" TextWrapping="Wrap" FontSize="16" IsReadOnly="True"
+                     VerticalScrollBarVisibility="Auto" AcceptsReturn="True" Background="White" Foreground="Black"/>
+        </ScrollViewer>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+            <Button Content="🎙 Speak" Click="MicButton_Click"
+                    Width="100" Height="40" Background="Green" Margin="10"/>
+            <Button Content="🔊 Repeat Last Reply" Click="SpeakButton_Click"
+                    Width="150" Height="40" Background="Orange" Margin="10"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

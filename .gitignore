@@ -1,0 +1,15 @@
+# Ignore build outputs
+bin/
+obj/
+.vs/
+*.user
+*.suo
+
+# Ignore generated files
+temp.wav
+recognized.txt
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
